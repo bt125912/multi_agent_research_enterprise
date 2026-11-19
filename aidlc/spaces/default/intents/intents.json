@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "01a1f45b-4c4e-7b7b-87ca-1680a6d6972a",
+    "slug": "multimodal-research-assi",
+    "dirName": "261119-multimodal-research-assi",
+    "scope": "enterprise",
+    "repos": [
+      "init"
+    ],
+    "status": "in-flight",
+    "request": "720a64c6"
+  }
+]
