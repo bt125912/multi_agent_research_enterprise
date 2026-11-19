@@ -1,0 +1,17 @@
+# Optional local infrastructure; not required for the demo API.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: research
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-research}
+      POSTGRES_DB: research
+    ports: ["127.0.0.1:5432:5432"]
+    volumes: ["postgres_data:/var/lib/postgresql/data"]
+  qdrant:
+    image: qdrant/qdrant:latest # Pin digest before production deployment.
+    ports: ["127.0.0.1:6333:6333"]
+    volumes: ["qdrant_data:/qdrant/storage"]
+volumes:
+  postgres_data:
+  qdrant_data:
