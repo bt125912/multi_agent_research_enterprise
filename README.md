@@ -29,3 +29,9 @@ Only run if `runtime/cursor/install.ts` exists, after reviewing the installer an
 - Initial production deployment should package the agents in the Python API process; ingestion worker is a separate process when implemented.
 - Vector DB, object store, web provider, OIDC, telemetry, and persistent checkpointing are **not yet integrated**. See `docs/requirements/ACCEPTANCE.md`.
 - The included deterministic API is a safe, runnable scaffold, not an enterprise research engine.
+
+## Architecture and Acceptance
+
+- [Architecture Reference](docs/architecture/ARCHITECTURE_REFERENCE.md)
+- [Component Contracts](CONTENT.md)
+- [Acceptance Criteria](ACCEPTANCE_CRITERIA.md)
