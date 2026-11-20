@@ -55,7 +55,7 @@ D. Not applicable
 E. None
 X. Other (please specify)
 
-[Answer]:
+[Answer]: A. No hard deadline without an explicit later decision; provisional 14–20 weeks stays non-binding. The 14–20-week estimate remains provisional and non-binding.
 
 ## Q6. [Product] How should V1 integrations and advanced features be separated?
 
@@ -66,7 +66,7 @@ D. Not applicable
 E. None
 X. Other (please specify)
 
-[Answer]:
+[Answer]: A. V1 essentials: four-agent path, mocks, UI-01, UI-02, isolation and NFRs. Advanced/future: named enterprise connectors, live-provider optimization, optional analytics — after an extensible connector framework exists. Scope must separate architecture-validation MVP, production V1, and advanced future features. Project 2 gap analysis is reference evidence only; not code-reuse authorization.
 
 ## Q7. [Product] How do Stage 3 conditions constrain this scope?
 
@@ -77,7 +77,7 @@ D. Not applicable
 E. None
 X. Other (please specify)
 
-[Answer]:
+[Answer]: A. Keep all nine Stage 3 conditions open in the scope document; do not treat account, regime, providers, stack, budget, timeline, blockers, or live validation as in-scope completed work. All nine Stage 3 CONDITIONAL GO conditions remain OPEN.
 
 ## Consolidated Summary Confirmation
 
@@ -86,4 +86,5 @@ Does this all look correct before I generate the artifact?
 - Looks correct
 - Request changes
 
-[Answer]:
+[Answer]: Looks correct
+

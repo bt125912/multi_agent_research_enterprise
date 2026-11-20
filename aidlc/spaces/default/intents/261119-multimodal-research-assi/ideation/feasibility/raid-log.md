@@ -13,7 +13,7 @@ Status values: **Open**, **Accepted**, **Mitigating**. Evidence labels: **VERIFI
 | R-03 | Premature stack or vendor lock-in | High | Medium | Provider-neutral interfaces; no stack selection in Ideation | Enterprise Architect | Open | Feasibility Q3, Q8 VERIFIED |
 | R-04 | Compliance regime chosen late | High | Medium | Keep controls mandatory; regime decision owned by Security/Compliance | Security/Compliance Reviewer | Open | Applicability UNKNOWN |
 | R-05 | Integration list never finalized | High | Medium | Extensible connectors; decide V1 connectors in later stages | Product Owner; Enterprise Architect | Open | List UNKNOWN |
-| R-06 | Demo reused without gap analysis | Medium | Medium | Brownfield reference only; reuse only after evidenced gap analysis | AI Engineering Lead; QA Lead | Open | Decision VERIFIED |
+| R-06 | Demo reused without gap analysis | Medium | Medium | Brownfield reference only; reuse only after evidenced gap analysis; preliminary assessment CONDITIONALLY ACCEPTED 20 Nov 2026 as architecture evidence only — not reuse approval | AI Engineering Lead; QA Lead | Open | Preliminary assessment VERIFIED as recorded; reuse still NOT authorized |
 | R-07 | Cost exceeds unapproved ceiling | Medium | UNKNOWN | Measure USD per request; set ceiling when approved | Product Owner | Open | Ceiling UNKNOWN |
 | R-08 | 14–20 week plan slips | Medium | UNKNOWN | Keep estimate provisional; set schedule in Delivery Planning | Product Owner; Delivery | Open | Estimate ASSUMED |
 | R-09 | AWS account or cloud readiness assumed wrongly | Medium | Medium | Account existence UNKNOWN; do not provision from Ideation | Enterprise Architect; Platform | Open | NOT_VERIFIED account |
@@ -24,7 +24,7 @@ Status values: **Open**, **Accepted**, **Mitigating**. Evidence labels: **VERIFI
 
 | ID | Assumption | Status | If wrong |
 | --- | --- | --- | --- |
-| A-01 | Parallel Both and synthesis once remain the Both-route baseline | ASSUMED | Revisit routing design in Domain / Functional Design |
+| A-01 | Parallel Both and synthesis once remain the Both-route baseline | ASSUMED | Revisit routing design in Domain / Functional Design; see I-06 (starter sequential-Both mismatch) |
 | A-02 | Build workflow and UIs; replaceable providers remain the commercial direction | ASSUMED / confirmed product decision | Reopen build-vs-buy |
 | A-03 | Mock path is enough to finish Ideation feasibility | ASSUMED | Require live providers earlier |
 | A-04 | Planning metric baselines stay unmeasured until test evidence exists | ASSUMED | Do not claim PASS |
@@ -40,6 +40,8 @@ Status values: **Open**, **Accepted**, **Mitigating**. Evidence labels: **VERIFI
 | I-03 | Organizational blockers not identified | Open | Must not be read as “no blockers” |
 | I-04 | Integration systems not listed | Open | Blocks precise integration design, not Ideation exit if accepted open |
 | I-05 | EUR-Lex Official Journal HTML NOT_VERIFIED (HTTP 403) in Market Research verification | Open | Summaries cited; full OJ text still NOT_VERIFIED |
+| I-06 | Project 1 starter implements Both sequentially (`orchestration/graph.py`); approved Intent requires parallel Both then synthesis once | Open | Architecture/design concern for Domain / Functional Design; do not treat starter sequential path as the approved baseline |
+| I-07 | Project 2 reference assessment CONDITIONALLY ACCEPTED as preliminary evidence only | Open | Path `...\multimodal_research_assistant\multimodal_research_assistant`; see `ideation/scope-definition/reviews/project-2-reference-assessment.md`; not implementation approval |
 
 ## Dependencies
 
@@ -47,7 +49,7 @@ Status values: **Open**, **Accepted**, **Mitigating**. Evidence labels: **VERIFI
 | --- | --- | --- | --- |
 | D-01 | Approved Intent Statement | All Feasibility conclusions | VERIFIED available |
 | D-02 | Approved Market Research package | Competitive and buy/build context | VERIFIED available |
-| D-03 | Later gap analysis of the demo | Any reuse recommendation | Not started |
+| D-03 | Gap analysis of the demo (Project 2) | Any reuse recommendation | Preliminary assessment recorded 20 Nov 2026; CONDITIONALLY ACCEPTED as architecture evidence; **not** complete closure of condition 7 / DEC-08 |
 | D-04 | Provider selection (model, web search, vector) | Live validation and production | Open |
 | D-05 | Compliance regime decision | Production authorization path | Open |
 | D-06 | Team Formation and Delivery Planning | Timeline, budget, staffing | Open |
@@ -65,7 +67,7 @@ Status values: **Open**, **Accepted**, **Mitigating**. Evidence labels: **VERIFI
 | DEC-05 | Cost ceiling | None approved | Product Owner | Open |
 | DEC-06 | Delivery schedule | 14–20 weeks provisional only | Product Owner; Delivery | Open |
 | DEC-07 | Residency region set | Undecided; isolation mandatory | Security/Compliance Reviewer | Open |
-| DEC-08 | Demo component reuse | Only after gap analysis | AI Engineering Lead; QA Lead | Open |
+| DEC-08 | Demo component reuse | Only after gap analysis; preliminary read-only assessment CONDITIONALLY ACCEPTED 20 Nov 2026 — reference only; no import authorized | AI Engineering Lead; QA Lead | Open |
 | DEC-09 | Stage 3 Feasibility completion | Approved 19 November 2026 with CONDITIONAL GO for continuing Ideation | Product Owner | Accepted |
 
 ## Stage 3 approval conditions (preserved)
@@ -78,7 +80,7 @@ Recorded at Stage 3 gate approval. These conditions remain open and binding for 
 4. V1 integration targets remain unconfirmed.
 5. Budget, cost ceiling, timeline, and team capabilities remain open.
 6. Organizational blockers remain UNKNOWN.
-7. Existing demo reuse requires an evidenced gap analysis.
+7. Existing demo reuse requires an evidenced gap analysis. **Still OPEN.** A preliminary read-only assessment was CONDITIONALLY ACCEPTED on 20 November 2026 as architecture evidence only; it does **not** fully close this condition or authorize reuse.
 8. Mock-based feasibility does not establish live-provider validation or production readiness.
 9. Cross-tenant isolation must be implemented and tested before production.
 

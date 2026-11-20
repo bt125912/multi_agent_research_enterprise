@@ -11,17 +11,34 @@ A clean **application starter** for AWS AI-DLC Inception and iterative Construct
 5. Visit http://localhost:5173. The API at http://localhost:8000 supports a **demo deterministic supervisor** and returns explicit unavailable states for RAG and live web search. It does not fabricate citations.
 6. `pytest` in `apps/research-api` for starter tests.
 
-## Official AWS AI-DLC integration (after checking release integrity)
+## Official AWS AI-DLC setup
 
-Run from a PowerShell terminal where Bun works, using your separately verified release archive:
+Full Cursor + Windows PowerShell setup, diagnostics, and operating procedure:
+
+- [docs/setup/README.md](docs/setup/README.md)
+- [docs/setup/AWS_AI_DLC_Cursor_Setup_Guide.md](docs/setup/AWS_AI_DLC_Cursor_Setup_Guide.md)
+- [docs/setup/COMMAND_REFERENCE.md](docs/setup/COMMAND_REFERENCE.md)
+
+Quick health check from the repository root (Bun required for this harness):
+
+```powershell
+bun .cursor/tools/aidlc.ts doctor
+bun .cursor/tools/aidlc.ts --status
+```
+
+In Cursor Agent Chat: `/aidlc --doctor` and `/aidlc --status`.
+
+### Optional: configure from a verified release archive
 
 ```powershell
 $project = (Resolve-Path .).Path
 bun "D:\New_test\aws-aidlc\release\runtime\cursor\install.ts" "$project"
-bun .cursor/tools/aidlc-utility.ts doctor
+bun .cursor/tools/aidlc.ts doctor
 ```
 
-Only run if `runtime/cursor/install.ts` exists, after reviewing the installer and its effects. Restart Cursor, run `/aidlc --doctor`, and start Inception. Do not copy `.cursor` or `aidlc` from the AWS source checkout.
+Only run if `runtime/cursor/install.ts` exists, after reviewing the installer and its effects. Restart Cursor afterward. Do not copy `.cursor` or `aidlc` from an unverified source checkout. Prefer `aidlc doctor` / project-local doctor over blind reconfiguration when this project is already running.
+
+Configuring AI-DLC does **not** provision AWS infrastructure.
 
 ## Design notes
 
